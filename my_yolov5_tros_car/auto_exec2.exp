@@ -1,0 +1,10 @@
+#!user/bin/except -f
+set timeout -1
+spawn su
+except "Password:"
+send "root\n"
+except "#"
+send "source /opt/tros/setup.bash"
+except "#"
+send "python3 my_code4.py"
+interact

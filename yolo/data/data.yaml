@@ -1,0 +1,10 @@
+ # dataset path
+train: /home/6T/ajl/data9/train
+val: /home/6T/ajl/data9/val
+test: /home/6T/ajl/data9/test
+
+# number of classes
+nc: 7
+
+# class names
+names: ['person', 'helmet-on', 'bicycle', 'motorcycle','ebike', 'foodbag', 'helmet-off']

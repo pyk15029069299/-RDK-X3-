@@ -1,0 +1,12 @@
+#!user/bin/except -f
+set timeout -1
+spawn su
+except "Password:"
+send "root\n"
+except "#"
+send "source /opt/tros/setup.bash"
+except "#"
+send "export CAM_TYPE=usb"
+except "#"
+send "ros2 launch dnn_node_example dnn_node_example.launch.py dnn_example_config_file:=yolov5workconfig.json dnn_example_image_width:=640 dnn_example_image_height:=480"
+interact
